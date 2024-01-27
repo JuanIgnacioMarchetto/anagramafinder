@@ -30,7 +30,7 @@ function App() {
   };
 
   const handleSearchAnagrams = () => {
-    const wordsList = ['listen', 'silent', 'enlist', 'night', 'thing', 'hello', 'olelh'];
+    const wordsList = ['listen', 'silent', 'enlist', 'night', 'thing', 'hello', 'olelh', 'post', 'stop', 'tops', 'opts', 'spot', 'pots', 'step', 'pets', 'pest', 'taste', 'state', 'teats', 'seat', 'east', 'sate', 'eats', 'arts', 'rats', 'star', 'tars', 'care', 'race', 'acre', 'earn', 'near', 'lane', 'lean', 'deal', 'lead', 'dale', 'silent', 'listen', 'enlist', 'night', 'thing', 'hello', 'olelh'];
 
     const foundAnagrams = wordsList.filter((word) => areAnagrams(searchWord, word));
 
