@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 function App() {
   const [word1, setWord1] = useState('');
@@ -25,7 +26,7 @@ function App() {
   };
 
   const handleAnagramCheck = () => {
-    const resultText = areAnagrams(word1, word2) ? 'They are anagrams' :'They are not anagrams';
+    const resultText = areAnagrams(word1, word2) ? 'They are anagrams' : 'They are not anagrams';
     setResult(resultText);
   };
 
@@ -34,7 +35,7 @@ function App() {
 
     const foundAnagrams = wordsList.filter((word) => areAnagrams(searchWord, word));
 
-    setResult(`Founded Anagrams : ${foundAnagrams.join(', ')}`);
+    setResult(`Founded Anagrams: ${foundAnagrams.join(', ')}`);
   };
 
   return (
@@ -53,7 +54,7 @@ function App() {
           value={word2}
           onChange={(e) => setWord2(e.target.value)}
         />
-        <button onClick={handleAnagramCheck}>Comprore</button>
+        <button onClick={handleAnagramCheck}>Compare</button>
       </div>
 
       <div>
@@ -63,7 +64,7 @@ function App() {
           value={searchWord}
           onChange={(e) => setSearchWord(e.target.value)}
         />
-        <button onClick={handleSearchAnagrams}>Seach for anagrams</button>
+        <button onClick={handleSearchAnagrams}>Search for anagrams</button>
       </div>
 
       <div>
