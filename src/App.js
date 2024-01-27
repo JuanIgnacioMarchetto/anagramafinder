@@ -30,8 +30,10 @@ function App() {
   };
 
   const handleSearchAnagrams = () => {
-    
-    const foundAnagrams = ['anagram1', 'anagram2'];
+    const wordsList = ['listen', 'silent', 'enlist', 'night', 'thing', 'hello', 'olelh'];
+
+    const foundAnagrams = wordsList.filter((word) => areAnagrams(searchWord, word));
+
     setResult(`Anagramas encontrados: ${foundAnagrams.join(', ')}`);
   };
 
