@@ -25,7 +25,7 @@ function App() {
   };
 
   const handleAnagramCheck = () => {
-    const resultText = areAnagrams(word1, word2) ? 'Son anagramas' : 'No son anagramas';
+    const resultText = areAnagrams(word1, word2) ? 'They are anagrams' :'They are not anagrams';
     setResult(resultText);
   };
 
@@ -34,35 +34,36 @@ function App() {
 
     const foundAnagrams = wordsList.filter((word) => areAnagrams(searchWord, word));
 
-    setResult(`Anagramas encontrados: ${foundAnagrams.join(', ')}`);
+    setResult(`Founded Anagrams : ${foundAnagrams.join(', ')}`);
   };
 
   return (
     <div>
+      <h1>Are they anagrams?</h1>
       <div>
         <input
           type="text"
-          placeholder="Palabra 1"
+          placeholder="word 1"
           value={word1}
           onChange={(e) => setWord1(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Palabra 2"
+          placeholder="word 2"
           value={word2}
           onChange={(e) => setWord2(e.target.value)}
         />
-        <button onClick={handleAnagramCheck}>Comprobar Anagramas</button>
+        <button onClick={handleAnagramCheck}>Comprore</button>
       </div>
 
       <div>
         <input
           type="text"
-          placeholder="Buscar anagramas con:"
+          placeholder="Search Anagram:"
           value={searchWord}
           onChange={(e) => setSearchWord(e.target.value)}
         />
-        <button onClick={handleSearchAnagrams}>Buscar Anagramas</button>
+        <button onClick={handleSearchAnagrams}>Seach for anagrams</button>
       </div>
 
       <div>
